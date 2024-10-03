@@ -1,0 +1,23 @@
+# aqui tenho que colocar o nome do pipeline (fluxo de trabalho - worflow)
+name: Primeiro worflow
+# em quais eventos de gatiloh quero que dispare meu script
+on:
+  push:
+    branches:
+    - developer
+    - main
+    - master
+  pull_request:
+    branches: [main, master]
+  # quais são os trabalhos (fluxo) a serem executados pelo workflow
+  jobs:
+    primeiro-fluxo:
+    # para ser executado nesta máquina virtual (container linux)
+    runs-on: ubuntu-latest
+    # agora irei incluir os passos do script
+    steps:
+      -name: Passo 1
+      run: echo "Executando o primeiro passo."
+      -
+      
+      
